@@ -1,8 +1,8 @@
 <?php
 $servername = "mysql:3306";
-$username = "dev";
-$password = "dev";
-$dbname = "database";
+$username = getenv("MYSQL_USER");
+$password = getenv("MYSQL_ROOT_PASSWORD");
+$dbname = getenv("MYSQL_DATABASE");
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
