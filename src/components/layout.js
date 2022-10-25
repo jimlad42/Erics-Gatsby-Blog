@@ -35,8 +35,8 @@ import {
               </Link>
             </li>
             <li className={navLinkItem}>
-            <Link to="/blog" className={navLinkText}>
-              Blog 
+            <Link to="/Recipes" className={navLinkText}>
+              Recipes 
             </Link>
           </li>
           </ul>
