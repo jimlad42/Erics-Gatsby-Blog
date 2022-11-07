@@ -8,6 +8,7 @@ import {
     navLinkText,
     siteTitle,
   } from './layout.module.css'
+  import { motion } from "framer-motion"
 
   const Layout = ({ pageTitle, children }) => {
     const data = useStaticQuery(graphql`
@@ -42,7 +43,15 @@ import {
           </ul>
         </nav>
         <main>
-          <h1 className={heading}>{pageTitle}</h1>
+        <motion.h1
+                animate={{opacity: 1, scale: 1 }}
+                transition={{
+                    duration: 1,
+                    delay: 0.1,
+                    ease: [0.5, 0.71, 1, 1.1],
+                }}
+                initial={{ opacity: 0, scale: 0.5 }}
+            >{pageTitle}</motion.h1>
           {children}
         </main>
       </div>
