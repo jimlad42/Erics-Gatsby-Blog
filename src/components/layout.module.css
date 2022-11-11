@@ -1,6 +1,5 @@
 .container {
-    margin: auto;
-    max-width: 500px;
+    margin: 100px;
     font-family: sans-serif;
   }
 
@@ -36,4 +35,9 @@
     content: "";
     display: table;
     clear: both;
+  }
+  .sidebar {
+    float: right;
+    width: 300px;
+    border: 3px solid #73AD21;
   }

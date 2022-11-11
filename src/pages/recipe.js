@@ -23,7 +23,7 @@ const IndexPage = props => {
       <p></p>
       Cooking Instructions: 
       <Markdown>{ node.recipeInstruction.value }</Markdown>
-      <img src={node.mediaImage.mediaImage.url} alt=""></img>
+      <img src={node.mediaImage.mediaImage.url} alt="" style="width: 100%"></img>
     </Layout>
   )
 }

@@ -12,14 +12,7 @@ module.exports = {
     options: {
       "icon": "src/images/icon.png"
     }
-  }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "images",
-      "path": "./src/images/"
-    },
-    __key: "images"
-  }, {
+  }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp",  {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "pages",
