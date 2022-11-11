@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import {
   container,
@@ -6,10 +6,10 @@ import {
   navLinkItem,
   navLinkText,
   siteTitle,
-  sidebar
 } from './layout.module.css'
 import { motion } from "framer-motion"
-import ShoppingList from './shoppinglist'
+
+
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
@@ -21,6 +21,10 @@ const Layout = ({ pageTitle, children }) => {
       }
     }
   `)
+  
+
+
+
   return (
     <div className={container}>
       <header className={siteTitle}>{data.site.siteMetadata.title}</header>
@@ -54,11 +58,8 @@ const Layout = ({ pageTitle, children }) => {
           initial={{ opacity: 0, scale: 0.5 }}>
           {pageTitle}
         </motion.h1>
-        <div style={{ display: "grid", gridTemplateColumns: "80% 20%" }}>
-          <div classname="Main content">
-            {children}
-          </div>
-          <ShoppingList></ShoppingList>
+        <div classname="Main content">
+          {children}
         </div>
       </main>
     </div>
