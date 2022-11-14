@@ -1,43 +1,62 @@
 .container {
-    margin: 100px;
-    font-family: sans-serif;
-  }
+  padding: 100px;
+  font-family: sans-serif;
+  background-color: bisque;
+  height:100%;
+}
 
-  .heading {
-    color: rebeccapurple;
-  }
-  .nav-links {
-    display: flex;
+.nav {
+  background-color: rgb(62, 88, 163);
+  padding: 15px;
+  text-align: center;
+}
+
+.heading {
+  color: rgb(123, 18, 120);
+  text-align: center;
+}
+
+.nav-links {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+.nav-link-item {
+    float: none;
+    display: inline-block;
+	  text-align: center;
+    margin-right: 1%;
     list-style: none;
-    padding-left: 0;
-  }
-  .nav-link-item {
-    padding-right: 2rem;
-  }
-  .nav-link-text {
-    color: black;
-  }
-  .site-title {
-    font-size: 3rem;
-    color: gray;
-    font-weight: 700;
-    margin: 3rem 0;
-  }
-  /* Create two equal columns that floats next to each other */
-  .column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-  }
+}
 
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .sidebar {
-    float: right;
-    width: 300px;
-    border: 3px solid #73AD21;
-  }
+.nav-link-text {
+  color: black;
+}
+
+.site-title {
+  font-size: 3rem;
+  color: rgb(7, 27, 112);
+  font-weight: 700;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.shoppingList {
+  float: right;
+  width: 300px;
+  border: 3px solid #73AD21;
+  text-align: center;
+  height:100%;
+}
+
+.mainContent{
+  padding:10px;
+}
+
+.recipe {
+  width:80%;
+}
+.ingredientList{
+  padding:10px;
+}

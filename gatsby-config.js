@@ -4,8 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Eric's Blog`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Eric's Recipe Site`
   },
   plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", {
     resolve: 'gatsby-plugin-manifest',

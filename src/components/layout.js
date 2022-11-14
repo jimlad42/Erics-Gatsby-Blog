@@ -2,10 +2,13 @@ import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import {
   container,
+  heading,
+  nav,
   navLinks,
   navLinkItem,
   navLinkText,
   siteTitle,
+  mainContent,
 } from './layout.module.css'
 import { motion } from "framer-motion"
 
@@ -28,7 +31,7 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <div className={container}>
       <header className={siteTitle}>{data.site.siteMetadata.title}</header>
-      <nav>
+      <nav className={nav}>
         <ul className={navLinks}>
           <li className={navLinkItem}>
             <Link to="/" className={navLinkText}>
@@ -46,8 +49,6 @@ const Layout = ({ pageTitle, children }) => {
             </Link>
           </li>
         </ul>
-      </nav>
-      <main>
         <motion.h1
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -55,10 +56,13 @@ const Layout = ({ pageTitle, children }) => {
             delay: 0.1,
             ease: [0.5, 0.71, 1, 1.1],
           }}
-          initial={{ opacity: 0, scale: 0.5 }}>
+          initial={{ opacity: 0, scale: 0.5 }}
+          className={heading}>
           {pageTitle}
         </motion.h1>
-        <div classname="Main content">
+      </nav>
+      <main>
+        <div className={mainContent}>
           {children}
         </div>
       </main>

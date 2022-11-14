@@ -16,15 +16,24 @@ const ReciepePage = ({ data }) => {
         setIngredients(storage);
     }
   });
-
+  
   let addIngredient = (ingredient) => {
     localStorage.setItem('ingredients', JSON.stringify(ingredientsState.concat([ingredient])))
-    setIngredients(ingredientsState.concat(["Ingredient"]))
+    setIngredients(ingredientsState.concat([ingredient]))
   }
-
+  
   let clearIngredients = () => {
     localStorage.setItem('ingredients', [])
     setIngredients([])
+  }
+
+  let removeIngredient = (ingredient) => {
+    let newState = ingredientsState
+    newState.splice(newState.indexOf(ingredient), 1)
+    localStorage.setItem('ingredients', JSON.stringify(newState))
+    //I don't know why passing the newstate isn't working, and by this point I don't care.
+    //This works.
+    setIngredients(JSON.parse(localStorage.getItem('ingredients')))
   }
 
 
@@ -44,7 +53,7 @@ const ReciepePage = ({ data }) => {
           }
         </div>
         <div>
-          <ShoppingList addIngredient={addIngredient} clearIngredients={clearIngredients} ingredientsState={ingredientsState}></ShoppingList>
+          <ShoppingList addIngredient={addIngredient} clearIngredients={clearIngredients} ingredientsState={ingredientsState} removeIngredient={removeIngredient}></ShoppingList>
         </div>
       </div>
     </Layout>
@@ -58,6 +67,7 @@ export const query = graphql`query {
           node {
             path
             title
+            id
           }
         }
       }
